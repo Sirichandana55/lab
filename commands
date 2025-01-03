@@ -1,0 +1,57 @@
+Docker
+1) docker --version
+2) sudo docker login
+3) sudo docker login -u <username>
+4) sudo docker pull mysql 
+5) sudo docker run --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql 
+6) sudo docker ps -a
+7) sudo docker ps
+8) sudo docker stop <container_id or container name>
+9) sudo docker rm <container_id or container name>
+10) sudo docker rmi mysql
+
+GIt push
+sudo apt update
+sudo apt install git
+git --version
+git config --global user.name "your username"
+git config --global user.email "your email"
+git config --list
+-----create a folder now----
+pwd
+mkdir <-foldername->
+cd <-folder name->
+------colne the repo-----
+git clone <-repo link->
+ls
+cd <-goto repo folder->
+---------creating file and pushing to origin-----
+
+touch <-filename->.java
+gedit <-filename->.java
+It opens editor write the code after writing 
+git status
+git add <-filename->.java
+git commit -m "inital commit"
+git push origin main
+
+git remote set-url origin https://<username>:<personal_access_token>@github.com/<username>/<repository>.git
+
+kubernates 
+minikube start
+minikube status(Running)
+minikube ip
+kubectl cluster -info
+kubectl get deployments(shows all deployments)
+if present delete 
+kubectl delete deployment (nginx)
+kubectl create deployment (nginx) --image=nginx
+kubectl get services 
+If present delete 
+kubectl delete service (nginx)
+kubectl expose deployment nginx --port=80 --type=NodePort
+kubectl get pods (Running)
+minikube service nginx --url
+If running above url will open(welcome to nginx)
+minikube dashboard
+minikube stop
